@@ -1,0 +1,260 @@
+/* general.css */
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px base for easy rem calculations */
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 120rem; /* 1200px */
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem 6.4rem; /* row-gap | column-gap */
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+/* Typography */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem; /* 52px */
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem; /* 44px */
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem; /* 30px */
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem; /* 16px */
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+/* Buttons */
+.btn,
+.btn--form {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.btn--full {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline {
+  background-color: #fff;
+  color: #555;
+  border: 2px solid #e67e22;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+}
+
+.btn--form:hover,
+.btn--form:active {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--form {
+  padding: 1.2rem;
+}
+
+/* Links */
+.link {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem; /* 18px */
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+/* Helper Classes */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+
+  .heading-primary {
+    font-size: 4.2rem; /* 42px */
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem; /* 36px */
+    margin-bottom: 6.4rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem; /* 24px */
+    margin-bottom: 1.6rem;
+  }
+
+  .subheading {
+    font-size: 1.4rem; /* 14px */
+    letter-spacing: 0.5px;
+  }
+
+  .btn,
+  .btn--form {
+    font-size: 1.6rem; /* 16px */
+    padding: 1rem 2.4rem;
+  }
+
+  .list-item {
+    font-size: 1.6rem; /* 16px */
+    gap: 1.2rem;
+  }
+
+  .feature-title {
+    font-size: 2rem; /* 20px */
+  }
+
+  .feature-text {
+    font-size: 1.6rem; /* 16px */
+  }
+
+  .footer-heading {
+    font-size: 1.6rem; /* 16px */
+  }
+
+  .footer-link {
+    font-size: 1.4rem; /* 14px */
+  }
+
+  /* Adjust container padding */
+  .container {
+    padding: 0 2rem;
+  }
+
+  /* Adjust grid gaps */
+  .grid {
+    gap: 4.8rem 3.2rem; /* row-gap | column-gap */
+  }
+}
